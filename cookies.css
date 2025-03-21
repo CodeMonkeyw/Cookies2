@@ -1,0 +1,23 @@
+body{
+    background-image: url(images/background.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    color: white;
+    font-family: "Merriweather", serif;
+    
+}
+
+#store{
+    background-color: black;
+    padding: 10px;
+    position: relative;
+    left:650px;
+    bottom: 290px;
+}
+
+
+
+    
+    
+  

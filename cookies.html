@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cookies.css">
+    <title>Cookies Clicker</title>
+</head>
+<body>
+  <div id="Container">
+    
+ <header>
+    Cookie Clicker
+ </header>
+  <br>
+   <div id="cookieContainer">
+
+    <header id="score">Cookies:0</header>
+    <button id="cookie" onclick="add()">
+     <img src="images/cookies.jpg" width="200" >
+    </button>
+    <p id="demo"></p>
+   </div> 
+   
+   <div id="store">
+    <h1>Store</h1>
+    <div id="cursorContainer">
+      <button >
+      <img src="images/cursor.jpg" width="50">
+      <h3>Cursor:5 cookies</h1>
+      </button>
+    </div>
+    <div id="grandmaContainer">
+      <button onclick="grandma()">
+      <img src="images/grandma.jpg" width="50">
+      <h3>Grandma:20 cookies</h1>
+    </div>
+    <div id="bankContainer">
+      <button>
+      <img src="images/bank.jpg" width="50">
+      <h3>Bank: 100 cookies</h1>
+    </div>
+   </div>
+ </div>
+  <script src="cookies.js"></script>
+</body>
+</html>
