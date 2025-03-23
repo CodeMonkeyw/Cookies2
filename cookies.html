@@ -4,44 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cookies.css">
-    <title>Cookies Clicker</title>
+    <title id="title">Cookies Clicker</title>
+    <link rel="icon" type="image/x-icon" href="images/cookie.jpg">
 </head>
 <body>
   <div id="Container">
     
- <header>
+ <header id="do">
     Cookie Clicker
  </header>
   <br>
    <div id="cookieContainer">
 
-    <header id="score">Cookies:0</header>
-    <button id="cookie" onclick="add()">
-     <img src="images/cookies.jpg" width="200" >
+    <header id="score">0</header>
+    <header id="cps">Cookes per Second:0</header>
+    <button id="cookie" onclick="UpdateGame()">
+     <img src="images/cookie.jpg" width="200" >
     </button>
     <p id="demo"></p>
    </div> 
-   
+   <div id="imageContainer">
+     <div id="bankBackground">
+      <img src="images/f.jpg" width="358px" height="100px" id="banke">
+     </div>
+   </div>
    <div id="store">
     <h1>Store</h1>
     <div id="cursorContainer">
-      <button >
+      <button id="cursorButton" >
       <img src="images/cursor.jpg" width="50">
-      <h3>Cursor:5 cookies</h1>
+      <h3>Cursor:<span id="Cost">5</span> cookies</h1>
       </button>
     </div>
     <div id="grandmaContainer">
-      <button onclick="grandma()">
+      <button  id="grandma">
       <img src="images/grandma.jpg" width="50">
       <h3>Grandma:20 cookies</h1>
     </div>
     <div id="bankContainer">
-      <button>
+      <button id="bunk">
       <img src="images/bank.jpg" width="50">
       <h3>Bank: 100 cookies</h1>
     </div>
    </div>
  </div>
-  <script src="cookies.js"></script>
+  <script src="cookie.js"></script>
 </body>
 </html>
