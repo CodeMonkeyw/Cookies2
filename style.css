@@ -1,0 +1,84 @@
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    color: white;
+    font-family: "Merriweather", serif;
+    
+}
+
+.ascendContainer{
+    position: fixed;z-index: 2;
+   background-image: url('images/background.jpg'); 
+    padding: 10px;
+    display: block;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    
+    
+}
+         
+#quit{
+position: relative;
+left: 85px;
+bottom: 18px
+
+
+}
+button{
+height: 39px;
+}
+#imageContainer{
+position: relative; 
+left: 240px;
+bottom: 427px;  
+border: 2px solid white;
+width: 358px;
+height: 420px;
+z-index: 0;
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#store{
+    position: relative;z-index: 1;
+   left:630px ;
+   text-align: center;
+   bottom: 860px;
+   border: 2px bisque solid;
+   width: 220px;
+   height: 420px;
+}
+#do{
+    background-color: black;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    bottom: 10px;
+    display: block;
+    padding-left: 15px;
+    width: 1300px;
+    right: 20px;
+}
+#cookieContainer{
+    border: solid 2px;
+    width: 220px;
+    padding: 5px;
+    text-align: center;
+    height: 420px;
+    
+}
+#cookie {
+    background-color: transparent;
+    border:none;
+    transition-duration: 1s;
+}
+    
+#cookie:active{
+transform: scale(1.1);
+}
+*, *::after, *::before {
+box-sizing: border-box;
+}

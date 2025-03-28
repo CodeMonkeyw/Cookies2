@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cookies.css">
+    <link rel="stylesheet" href="style.css">
     <title id="title">Cookies Clicker</title>
     <link rel="icon" type="image/x-icon" href="images/cookie.jpg">
 </head>
@@ -21,8 +21,12 @@
     <button id="cookie" onclick="UpdateGame()">
      <img src="images/cookie.jpg" width="200" >
     </button>
+    <button>Ascend?</button>
+    
     <p id="demo"></p>
    </div> 
+   <div class="ascendContainer" id="modal">
+   
    <div id="imageContainer">
      <div id="bankBackground">
       <img src="images/f.jpg" width="358px" height="100px" id="banke">
@@ -30,24 +34,30 @@
    </div>
    <div id="store">
     <h1>Store</h1>
-    <div id="cursorContainer">
-      <button id="cursorButton" >
-      <img src="images/cursor.jpg" width="50">
-      <h3>Cursor:<span id="Cost">5</span> cookies</h1>
+    <div id="cursorContainer" class="s">
+      <button id="cursorButton" onclick="">
+      Cursor:5 cookies
       </button>
     </div>
-    <div id="grandmaContainer">
+    <br>
+    <div id="grandmaContainer" class="s">
       <button  id="grandma">
-      <img src="images/grandma.jpg" width="50">
-      <h3>Grandma:20 cookies</h1>
+       Grandma: 20 cookies
     </div>
-    <div id="bankContainer">
+    <br>
+    <div id="bankContainer" class="s">
       <button id="bunk">
-      <img src="images/bank.jpg" width="50">
-      <h3>Bank: 100 cookies</h1>
+        Bank: 100 cookies
+    </div>
+    <br>
+    <div id="farmContainer" class="s">
+      <button id="farm">
+        Farm:500 cookies
+      </button>
+   
     </div>
    </div>
  </div>
-  <script src="cookie.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
