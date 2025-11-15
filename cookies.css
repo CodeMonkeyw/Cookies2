@@ -1,60 +1,101 @@
-body{
+body {
     background-image: url(images/background.jpg);
     background-size: cover;
-   background-repeat: no-repeat;
-   
-    color: white;
+    background-repeat: no-repeat;
     font-family: "Merriweather", serif;
-    
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    /* Center everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    backdrop-filter: blur(3px);
 }
 
-#imageContainer{
-position: relative; 
-left: 240px;
-bottom: 427px;  
-border: 2px solid white;
-width: 358px;
-height: 420px;
-z-index: 0;
-padding-top: 10px;
-padding-left: 10px;
-padding-right: 10px;
-}
-#store{
-    position: relative;
-   left:630px ;
-   text-align: center;
-   bottom: 860px;
-   border: 2px bisque solid;
-   width: 220px;
-   height: 420px;
-}
-#do{
-    background-color: black;
-    padding: 5px;
-    position: relative;
-    bottom: 10px;
-    display: block;
-    padding-left: 15px;
+/* Main layout container */
+#do {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20px;
     width: 1000px;
-    right: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
-#cookieContainer{
-    border: solid 2px;
-    width: 220px;
-    padding: 5px;
+
+/* Cookie container */
+#cookieContainer {
+    border: 2px solid white;
+    width: 260px;
+    padding: 15px;
     text-align: center;
     height: 420px;
-    
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(4px);
 }
+
+/* Big clickable cookie */
 #cookie {
     background-color: transparent;
-    border:none;
-    transition-duration: 1s;
+    border: none;
+    transition: transform 0.25s ease;
+    cursor: pointer;
 }
-    
-#cookie:active{
-transform: scale(1.1);
+
+#cookie:active {
+    transform: scale(1.13);
 }
-    
-  
+
+/* Cookie image box */
+#imageContainer {
+    position: relative;
+    border: 2px solid white;
+    width: 360px;
+    height: 420px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(4px);
+}
+
+/* Store panel */
+#store {
+    text-align: center;
+    border: 2px solid bisque;
+    width: 260px;
+    height: 420px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+}
+
+/* Store buttons look better */
+#store button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid #ddd;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#store button:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.03);
+}
+
+#store button:active {
+    transform: scale(0.97);
+}
