@@ -1,84 +1,169 @@
-body{
-    background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-    color: white;
-    font-family: "Merriweather", serif;
-    
+/* Catppuccin (mocha) theme variables + base rules */
+:root {
+    --cp-bg: #1f1e2e;
+    --cp-base: #242430;
+    --cp-surface: #1b1724;
+    --cp-text: #cdd6f4;
+    --cp-muted: #b8b4d6;
+    --cp-peach: #f5c2a1;
+    --cp-pink: #f2a2d0;
+    --cp-green: #a6e3a1;
+    --cp-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    --radius: 14px;
 }
 
-.ascendContainer{
-    position: fixed;z-index: 2;
-   background-image: url('images/background.jpg'); 
-    padding: 10px;
-    display: block;
-    border: 2px solid black;
-    margin: auto;
-    text-align: center;
-    
-    
+/* Apply page background, typography and base smoothing */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, var(--cp-base), var(--cp-bg));
+    color: var(--cp-text);
+    font-family: Inter, "Segoe UI", Roboto, "Merriweather", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-         
-#quit{
-position: relative;
-left: 85px;
-bottom: 18px
 
+/* Global box-sizing */
+*, *::before, *::after { box-sizing: inherit; }
 
+/* Panel styling */
+.panel {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: var(--cp-shadow);
+    backdrop-filter: blur(6px);
 }
-button{
-height: 39px;
+
+/* Button styling */
+button {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    font-weight: 700;
+    color: #1b1320;
+    background: linear-gradient(180deg, var(--cp-peach), #ffb86b);
+    border-radius: 12px;
+    box-shadow: 0 10px 26px rgba(245,194,161,0.12);
+    transition: transform 140ms ease, box-shadow 140ms ease;
+    font-size: 18px;
 }
-#imageContainer{
-position: relative; 
-left: 240px;
-bottom: 427px;  
-border: 2px solid white;
-width: 358px;
-height: 420px;
-z-index: 0;
-padding-top: 10px;
-padding-left: 10px;
-padding-right: 10px;
+button.secondary {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    color: var(--cp-text);
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: none;
 }
-#store{
-    position: relative;z-index: 1;
-   left:630px ;
-   text-align: center;
-   bottom: 860px;
-   border: 2px bisque solid;
-   width: 220px;
-   height: 420px;
+
+/* Focus ring */
+button:focus,
+#cookie:focus {
+    box-shadow: 0 0 0 6px rgba(245,194,161,0.12), 0 10px 30px rgba(6,6,14,0.5);
+    outline: none;
 }
-#do{
-    background-color: black;
-    padding: 5px;
-    position: sticky;
-    top: 0px;
-    bottom: 10px;
-    display: block;
-    padding-left: 15px;
-    width: 1300px;
-    right: 20px;
+
+/* Layout container */
+#Container {
+    display: grid;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    width: 100%;
+    place-items: center;
 }
-#cookieContainer{
-    border: solid 2px;
-    width: 220px;
-    padding: 5px;
-    text-align: center;
-    height: 420px;
-    
+
+/* Two-column layout for medium and large screens */
+@media (min-width: 1200px) {
+    #Container {
+        grid-template-columns: minmax(400px, 500px) 1fr;
+        gap: 60px;
+        padding: 0 60px;
+    }
+
+    #cookie img {
+        width: clamp(300px, 20vw, 600px);
+    }
+
+    #score {
+        font-size: clamp(50px, 6vw, 140px);
+    }
+
+    .ascendContainer #store {
+        padding: 32px;
+    }
+
+    button {
+        padding: 16px 28px;
+        font-size: 20px;
+    }
 }
-#cookie {
-    background-color: transparent;
-    border:none;
-    transition-duration: 1s;
+
+/* Enhanced layout for large desktops */
+@media (min-width: 1600px) {
+    #Container {
+        max-width: 2200px;
+        gap: 80px;
+        grid-template-columns: minmax(500px, 600px) 1fr;
+        padding: 0 80px;
+    }
+
+    #cookie img {
+        width: clamp(400px, 16vw, 800px);
+    }
+
+    #score {
+        font-size: clamp(60px, 7vw, 160px);
+    }
+
+    .ascendContainer #store {
+        max-width: 600px;
+        padding: 40px;
+    }
+
+    .panel {
+        padding: 32px;
+        border-radius: calc(var(--radius) + 6px);
+    }
 }
-    
-#cookie:active{
-transform: scale(1.1);
+
+/* Ultra-wide layout */
+@media (min-width: 2200px) {
+    #Container {
+        grid-template-columns: minmax(600px, 700px) 1fr;
+        gap: 100px;
+        max-width: 3000px;
+        padding: 0 100px;
+    }
+
+    #cookie img {
+        width: clamp(500px, 14vw, 1000px);
+    }
+
+    #score {
+        font-size: clamp(70px, 8vw, 180px);
+    }
+
+    #imageContainer {
+        padding: 48px;
+    }
+
+    button {
+        padding: 18px 32px;
+        font-size: 22px;
+    }
 }
-*, *::after, *::before {
-box-sizing: border-box;
+
+/* Accessibility: increase focus ring size at large screens */
+@media (min-width: 1200px) {
+    button:focus,
+    #cookie:focus {
+        box-shadow: 0 0 0 8px rgba(245,194,161,0.10), 0 10px 30px rgba(6,6,14,0.5);
+    }
 }

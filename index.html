@@ -8,56 +8,69 @@
     <link rel="icon" type="image/x-icon" href="images/cookie.jpg">
 </head>
 <body>
-  <div id="Container">
-    
- <header id="do">
-    Cookie Clicker
- </header>
-  <br>
-   <div id="cookieContainer">
+<div id="Container">
+    <header id="do">
+        Cookie Clicker
+    </header>
 
-    <header id="score">0</header>
-    <header id="cps">Cookes per Second:0</header>
-    <button id="cookie" onclick="UpdateGame()">
-     <img src="images/cookie.jpg" width="200" >
-    </button>
-    <button>Ascend?</button>
-    
-    <p id="demo"></p>
-   </div> 
-   <div class="ascendContainer" id="modal">
-   
-   <div id="imageContainer">
-     <div id="bankBackground">
-      <img src="images/f.jpg" width="358px" height="100px" id="banke">
-     </div>
-   </div>
-   <div id="store">
-    <h1>Store</h1>
-    <div id="cursorContainer" class="s">
-      <button id="cursorButton" onclick="">
-      Cursor:5 cookies
-      </button>
-    </div>
     <br>
-    <div id="grandmaContainer" class="s">
-      <button  id="grandma">
-       Grandma: 20 cookies
+
+    <div id="cookieContainer">
+        <header id="score">0</header>
+
+
+        <button id="cookie" onclick="UpdateGame()">
+            <img src="images/cookie.jpg" width="200" alt="cookie">
+        </button>
+
+       
+
+        <p id="demo"></p>
     </div>
-    <br>
-    <div id="bankContainer" class="s">
-      <button id="bunk">
-        Bank: 100 cookies
+
+    <div class="ascendContainer" id="modal">
+        <div id="imageContainer">
+            <div id="bankBackground">
+                <img src="images/f.jpg" width="358px" height="100px" id="banke" alt="bank">
+            </div>
+        </div>
+
+        <div id="store">
+            <h1>Store</h1>
+
+            <div id="cursorContainer" class="s">
+                <button id="cursorButton" onclick="">
+                    Cursor:5 cookies
+                </button>
+            </div>
+
+            <br>
+
+            <div id="grandmaContainer" class="s">
+                <button id="grandma">
+                    Grandma: 20 cookies
+                </button>
+            </div>
+
+            <br>
+
+            <div id="bankContainer" class="s">
+                <button id="bunk">
+                    Bank: 100 cookies
+                </button>
+            </div>
+
+            <br>
+
+            <div id="farmContainer" class="s">
+                <button id="farm">
+                    Farm:500 cookies
+                </button>
+            </div>
+        </div>
     </div>
-    <br>
-    <div id="farmContainer" class="s">
-      <button id="farm">
-        Farm:500 cookies
-      </button>
-   
-    </div>
-   </div>
- </div>
-  <script src="index.js"></script>
+
+</div>
+<script src="index.js"></script>
 </body>
 </html>
